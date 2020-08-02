@@ -1,0 +1,36 @@
+{
+  "name": "moleculer-nats-test",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "moleculer-runner --repl --hot service.js",
+    "start": "moleculer-runner service.js",
+    "ci": "jest --watch",
+    "pretest": "docker-compose up -d",
+    "test": "jest --coverage --runInBand",
+    "posttest": "docker-compose down",
+    "lint": "eslint test"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "",
+  "devDependencies": {
+    "@types/jest": "^26.0.8",
+    "eslint": "^7.6.0",
+    "jest": "^26.2.2",
+    "jest-cli": "^26.2.2",
+    "moleculer-repl": "^0.6.4"
+  },
+  "dependencies": {
+    "nats": "^1.4.9",
+    "moleculer": "^0.14.8"
+  },
+  "engines": {
+    "node": ">= 10.x.x"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
